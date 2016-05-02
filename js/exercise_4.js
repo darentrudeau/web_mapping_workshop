@@ -58,16 +58,17 @@ var clickHandler = function(e){
     info += '<div>';
     $('#info'). append(info);
   })
+    
+  var myGeoJSON = myLocation.getGeoJSON();
+  
+  getDirections(myGeoJSON.geometry.coordinates, feature.geometry.coordinates)
 }
 
 featureLayer.on('ready', function(){
   this.eachLayer (function(layer){
     layer.on('click', clickHandler);
   })
-  
-  var myGeoJSON = myLocation.getGeoJSON();
-  
-  getDirections(myGeoJSON.geometry.coordinates, feature.geometry.coordinates)
+
 })
 
 map.on('click', function(){
