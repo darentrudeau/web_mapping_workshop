@@ -119,6 +119,8 @@ function getDirections(frm,to){
       properties: {
         "stroke": "#ED23F1",
         "stroke-opacity": 0.8, 
-        "stroke-line"
+        "stroke-width":8
+      }
+    })
   })
- 
+}
