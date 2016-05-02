@@ -112,9 +112,9 @@ function getDirections(frm,to){
   }).done(function(data){
    var routeShape = polyline.decode(data.trip.legs[0].shape);
     routeLine.setGeoJSON({
-      type:'feature',
+      type:'Feature',
       geometry: {
-        type:'Linstring',
+        type:'LineString',
         coordinates:routeShape
       },
       properties: {
