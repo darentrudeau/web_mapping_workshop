@@ -45,7 +45,7 @@ var clickHandler = function(e){
   $('#info').empty();
   var feature = e.target.feature;
  
-  $('#sidebar').fade(400, function(){
+  $('#sidebar').fadeIn(400, function(){
     var info = '';
     
     info += '<div>';
