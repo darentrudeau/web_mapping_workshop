@@ -17,7 +17,7 @@ map.setView([39, -96], 4);
 
 // Great, now we have a basic web map!
 
-var dataFileToAdd = 'https://gist.githubusercontent.com/anonymous/c013cd7cd6f5b654586ff0cf6bbedd3a/raw/6a30a8ae7c91e19a4e33103df2a3b88f21e84db4/overpass.geojson';
+var dataFileToAdd = 'data/restaurants.goejson';
 
 var featureLayer = L.mapbox.featureLayer();
 
