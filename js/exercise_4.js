@@ -69,4 +69,20 @@ featureLayer.on('ready', function(){
 map.on('click', function(){
   $('#sidebar').fadeOut (200);
 })
+var myLocation = L.mabox.featureLayer().addTo(map);
 
+map.on ('locationfound', function(e){
+  myLocation.setGeoJson({
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [e.latlng.lng, e.latlng.lat]
+    }, 
+    properties: {
+      "title"; "Here Iam!",
+      "marker-color": " ff8888",
+      "marker-symbol": "star"
+    }
+  })
+})
+map.locate({setView: true})
