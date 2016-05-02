@@ -114,7 +114,7 @@ function getDirections(frm,to){
       type:'feature',
       geometry: {
         type:'Linstring',
-        coordinates; routeShape
+        coordinates:routeShape
       },
       properties: {
         "stroke": "#ED23F1",
